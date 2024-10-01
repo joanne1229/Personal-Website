@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Joanne Wang - Vintage Magazine Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Additional custom styles for the vintage look */
+    body {
+      background-color: #f4f1e8;
+      font-family: 'Rye', serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 1000px;
+      width: 80%;
+      margin: 0 auto;
+    }
+    
+    .vintage-border {
+      border: 4px solid #d53f3f;
+    }
+    .vintage-shadow {
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    .vintage-header {
+      background-color: #d53f3f;
+      color: #F2E8C6;
+    }
+    .vintage-section {
+      background-color: #ffffff;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    .vintage-title {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+    .magazine-cover {
+      position: relative;
+      height: 1000px;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      border: 4px solid #982B1C;
+      overflow: hidden;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .magazine-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .colliers-style {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 20px;
+      font-family: 'Rye', serif;
+    }
+    .left-section {
+      font-size: 3.5rem;
+      font-weight: bold;
+      color: #982B1C;
+      background-color: #982B1C;
+      padding: 5px 10px;
+      color: #F2E8C6;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      color: #F2E8C6;
+    }
+    .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 20px;
+      color: #F2E8C6;
+      display: flex;
+      flex-direction: column;
+    }
+    h1 {
+      font-size: 48px;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #F2E8C6;
+    }
+    .cover-content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    .tagline {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+    .footer {
+      font-size: 14px;
+      text-align: right;
+    }
+
+    /* Sticky Navbar Styles */
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #d53f3f;
+      color: white;
+      padding: 15px;
+      z-index: 1000;
+      width: 100%;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      font-size: 18px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+    nav ul li a:hover {
+      background-color: #ff4f4f;
+    }
+
+    /* Projects Grid */
+    /* Overlapping Flashcards CSS */
+    .projects-grid {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      margin-right: 120px;
+      gap: 0;
+    }
+    .project-item {
+      position: relative;
+      width: 400px;
+      height: 300px;
+      margin-right: -120px; /* Overlapping effect */
+      background-color: #fae6c8;
+      border: 2px solid #3b2e2e;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, margin-right 0.3s ease;
+      z-index: 1;
+    }
+    .project-item:hover {
+      transform: scale(1.05);
+      margin-right: 20px; /* Push the neighboring flashcards away */
+      z-index: 10;
+    }
+    .project-item img {
+      width: 100px;
+      margin-bottom: 10px;
+    }
+    .project-item h3 {
+      font-size: 24px;
+      color: #3b2e2e;
+      margin-bottom: 10px;
+    }
+    .project-item p {
+      color: #3b2e2e;
+      display: none; /* Initially hidden */
+    }
+    .project-item:hover p {
+      display: block; /* Show description on hover */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <nav>
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experiences">Experiences</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div id="about" class="container">
+    <!-- Magazine Cover -->
+    <div class="magazine-cover">
+      <img src="/api/placeholder/1000/1200" alt="Joanne Wang">
+      <div class="overlay"></div>
+      <div class="content">
+        <h1 class="left-section">JOANNE WANG</h1>
+        <div class="cover-content">
+          <h2>Computer Science Today</h2>
+          <p class="tagline">Innovating the Future of Technology</p>
+          <ul>
+            <li>Full-stack Development Prodigy</li>
+            <li>Machine Learning Enthusiast</li>
+            <li>Problem-Solving Expert</li>
+          </ul>
+          <p>Expected Graduation: May 2026 | GPA: 3.65/4.00</p>
+        </div>
+        <div class="footer">
+          Stevens Institute of Technology | New York, NY
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Section -->
+    <section id="projects" class="vintage-section container mx-auto">
+        <h2 class="vintage-title">Projects</h2>
+        <div class="projects-grid">
+          
+          <!-- Project 1 -->
+          <div class="project-item vintage-border vintage-shadow">
+            <img src="https://via.placeholder.com/100" alt="Project 1 Icon">
+            <h3>Project 1</h3>
+            <p>Description of Project 1. This project is focused on full-stack development using React and Node.js.</p>
+          </div>
+  
+          <!-- Project 2 -->
+          <div class="project-item vintage-border vintage-shadow">
+            <img src="https://via.placeholder.com/100" alt="Project 2 Icon">
+            <h3>Project 2</h3>
+            <p>Description of Project 2. A machine learning project that uses NLP to analyze large datasets.</p>
+          </div>
+  
+          <!-- Project 3 -->
+          <div class="project-item vintage-border vintage-shadow">
+            <img src="https://via.placeholder.com/100" alt="Project 3 Icon">
+            <h3>Project 3</h3>
+            <p>Description of Project 3. Implemented AI algorithms to optimize computational efficiency.</p>
+          </div>
+  
+          <!-- Project 4 -->
+          <div class="project-item vintage-border vintage-shadow">
+            <img src="https://via.placeholder.com/100" alt="Project 4 Icon">
+            <h3>Project 4</h3>
+            <p>Description of Project 4. Developed a mobile application for real-time data visualization.</p>
+          </div>
+  
+
+      </div>
+    </section>
+
+    <!-- Experiences Section -->
+    <section id="experiences" class="vintage-section">
+      <h2 class="text-4xl font-bold text-center mb-8">Experiences</h2>
+      <div class="projects-grid">
+        <!-- Experience 1 -->
+        <div class="relative vintage-border vintage-shadow">
+          <img src="/path-to-experience-image1.jpg" alt="Experience 1" class="w-full h-64 object-cover">
+          <div class="absolute bottom-0 left-0 bg-red-700 bg-opacity-
