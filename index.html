@@ -161,47 +161,52 @@
     }
 
     /* Projects Grid */
-    /* Overlapping Flashcards CSS */
-    .projects-grid {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      margin-right: 120px;
-      gap: 0;
-    }
-    .project-item {
-      position: relative;
-      width: 400px;
-      height: 300px;
-      margin-right: -120px; /* Overlapping effect */
-      background-color: #fae6c8;
-      border: 2px solid #3b2e2e;
-      padding: 20px;
-      text-align: center;
-      transition: transform 0.3s ease, margin-right 0.3s ease;
-      z-index: 1;
-    }
-    .project-item:hover {
-      transform: scale(1.05);
-      margin-right: 20px; /* Push the neighboring flashcards away */
-      z-index: 10;
-    }
-    .project-item img {
-      width: 100px;
-      margin-bottom: 10px;
-    }
-    .project-item h3 {
-      font-size: 24px;
-      color: #3b2e2e;
-      margin-bottom: 10px;
-    }
-    .project-item p {
-      color: #3b2e2e;
-      display: none; /* Initially hidden */
-    }
-    .project-item:hover p {
-      display: block; /* Show description on hover */
-    }
+/* Overlapping Flashcards CSS */
+.projects-grid {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-right: 120px;
+  gap: 0;
+}
+.project-item {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  margin-right: -120px; /* Overlapping effect */
+  background-color: #fae6c8;
+  border: 2px solid #3b2e2e;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, margin-right 0.3s ease;
+  z-index: 1;
+  overflow: hidden; /* To ensure content doesn't overflow the card */
+}
+.project-item:hover {
+  transform: scale(1.05);
+  margin-right: 20px; /* Push the neighboring flashcards away */
+  z-index: 10;
+}
+.project-item img {
+  width: 100px;
+  margin-bottom: 10px;
+  transition: opacity 0.3s ease; /* Smooth transition for hiding image */
+}
+.project-item h3 {
+  font-size: 24px;
+  color: #3b2e2e;
+  margin-bottom: 10px;
+}
+.project-item p {
+  color: #3b2e2e;
+  display: none; /* Initially hidden */
+}
+.project-item:hover img {
+  opacity: 0; /* Hide image on hover */
+}
+.project-item:hover p {
+  display: block; /* Show description on hover */
+}
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -251,32 +256,36 @@
     </div>
   </div>
 
-     <!-- Projects Section -->
-     <section id="projects" class="vintage-section">
-      <h2 class="vintage-title">Projects</h2>
-      <div class="projects-grid">
-        <div class="project-item vintage-border vintage-shadow">
-          <h3>Gamer Portfolio</h3>
-          <p>JavaScript, Gatsby, GraphQL, Tailwind CSS, AWS S3 API</p>
-          <p>Developed a platform for gamers to showcase portfolios, ranks, and clips. Implemented GraphQL and AWS S3 for efficient data management.</p>
-        </div>
-        <div class="project-item vintage-border vintage-shadow">
-          <h3>Bite Swipe</h3>
-          <p>JavaScript, React, Tailwind CSS, API</p>
-          <p>React-based web app for restaurant selection using Foursquare Places API and Tailwind CSS for responsive design.</p>
-        </div>
-        <div class="project-item vintage-border vintage-shadow">
-          <h3>Stevens Blueprint Website</h3>
-          <p>HTML, CSS, JavaScript, Tailwind CSS</p>
-          <p>Engineered the "Get Involved" section, increasing volunteer sign-ups by 25% using responsive design principles.</p>
-        </div>
-        <div class="project-item vintage-border vintage-shadow">
-          <h3>Digi-Drobe</h3>
-          <p>JavaScript, HTML, CSS, AJAX, MongoDB, AWS</p>
-          <p>Full stack social media web application for sharing and customizing outfit posts, using AWS and MongoDB for backend infrastructure.</p>
-        </div>
-      </div>
-    </section>
+  <!-- Projects Section -->
+<section id="projects" class="vintage-section">
+  <h2 class="vintage-title">Projects</h2>
+  <div class="projects-grid">
+    <div class="project-item vintage-border vintage-shadow">
+      <h3>Gamer Portfolio</h3>
+      <img src="/path-to-project-image1.jpg" alt="Gamer Portfolio Image">
+      <p>JavaScript, Gatsby, GraphQL, Tailwind CSS, AWS S3 API</p>
+      <p>Developed a platform for gamers to showcase portfolios, ranks, and clips. Implemented GraphQL and AWS S3 for efficient data management.</p>
+    </div>
+    <div class="project-item vintage-border vintage-shadow">
+      <h3>Bite Swipe</h3>
+      <img src="/path-to-project-image2.jpg" alt="Bite Swipe Image">
+      <p>JavaScript, React, Tailwind CSS, API</p>
+      <p>React-based web app for restaurant selection using Foursquare Places API and Tailwind CSS for responsive design.</p>
+    </div>
+    <div class="project-item vintage-border vintage-shadow">
+      <h3>Stevens Blueprint Website</h3>
+      <img src="/path-to-project-image3.jpg" alt="Stevens Blueprint Image">
+      <p>HTML, CSS, JavaScript, Tailwind CSS</p>
+      <p>Engineered the "Get Involved" section, increasing volunteer sign-ups by 25% using responsive design principles.</p>
+    </div>
+    <div class="project-item vintage-border vintage-shadow">
+      <h3>Digi-Drobe</h3>
+      <img src="/path-to-project-image4.jpg" alt="Digi-Drobe Image">
+      <p>JavaScript, HTML, CSS, AJAX, MongoDB, AWS</p>
+      <p>Full stack social media web application for sharing and customizing outfit posts, using AWS and MongoDB for backend infrastructure.</p>
+    </div>
+  </div>
+</section>
 
     <!-- Experiences Section -->
     <section id="experiences" class="vintage-section">
