@@ -202,6 +202,18 @@
     .project-item:hover p {
       display: block; /* Show description on hover */
     }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .skill-item {
+      background-color: #f4f1e8;
+      border: 2px solid #d53f3f;
+      padding: 0.5rem;
+      text-align: center;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -215,64 +227,54 @@
     </ul>
   </nav>
 
-  <!-- Main Content -->
-  <div id="about" class="container">
-    <!-- Magazine Cover -->
-    <div class="magazine-cover">
-      <img src="/api/placeholder/1000/1200" alt="Joanne Wang">
-      <div class="overlay"></div>
-      <div class="content">
-        <h1 class="left-section">JOANNE WANG</h1>
-        <div class="cover-content">
-          <h2>Computer Science Today</h2>
-          <p class="tagline">Innovating the Future of Technology</p>
-          <ul>
-            <li>Full-stack Development Prodigy</li>
-            <li>Machine Learning Enthusiast</li>
-            <li>Problem-Solving Expert</li>
-          </ul>
-          <p>Expected Graduation: May 2026 | GPA: 3.65/4.00</p>
-        </div>
-        <div class="footer">
-          Stevens Institute of Technology | New York, NY
-        </div>
+  <!-- Magazine Cover -->
+  <div id="about" class="magazine-cover">
+    <img src="/api/placeholder/1000/1200" alt="Joanne Wang">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1 class="left-section">JOANNE WANG</h1>
+      <div class="cover-content">
+        <p class="tagline">Aspiring Computer Scientist & Full-Stack Developer</p>
+        <p>I'm a passionate Computer Science student at Stevens Institute of Technology, expected to graduate in May 2026. With a strong foundation in both theory and practice, I'm dedicated to innovating and problem-solving in the world of technology.</p>
+        <h3>Skills Highlight:</h3>
+        <ul>
+          <li>Languages: Python, Java, C, C++, JavaScript</li>
+          <li>Web Technologies: React, Node.js, HTML, CSS</li>
+          <li>Areas of Expertise: Machine Learning, Data Analysis, Full-Stack Development</li>
+        </ul>
+        <h3>Education:</h3>
+        <p>BS in Computer Science | Stevens Institute of Technology | GPA: 3.65/4.00</p>
+      </div>
+      <div class="footer">
+        New York, NY | wangjoanne180@gmail.com | (646) 410-5907
       </div>
     </div>
+  </div>
 
-    <!-- Projects Section -->
-    <section id="projects" class="vintage-section container mx-auto">
-        <h2 class="vintage-title">Projects</h2>
-        <div class="projects-grid">
-          
-          <!-- Project 1 -->
-          <div class="project-item vintage-border vintage-shadow">
-            <img src="https://via.placeholder.com/100" alt="Project 1 Icon">
-            <h3>Project 1</h3>
-            <p>Description of Project 1. This project is focused on full-stack development using React and Node.js.</p>
-          </div>
-  
-          <!-- Project 2 -->
-          <div class="project-item vintage-border vintage-shadow">
-            <img src="https://via.placeholder.com/100" alt="Project 2 Icon">
-            <h3>Project 2</h3>
-            <p>Description of Project 2. A machine learning project that uses NLP to analyze large datasets.</p>
-          </div>
-  
-          <!-- Project 3 -->
-          <div class="project-item vintage-border vintage-shadow">
-            <img src="https://via.placeholder.com/100" alt="Project 3 Icon">
-            <h3>Project 3</h3>
-            <p>Description of Project 3. Implemented AI algorithms to optimize computational efficiency.</p>
-          </div>
-  
-          <!-- Project 4 -->
-          <div class="project-item vintage-border vintage-shadow">
-            <img src="https://via.placeholder.com/100" alt="Project 4 Icon">
-            <h3>Project 4</h3>
-            <p>Description of Project 4. Developed a mobile application for real-time data visualization.</p>
-          </div>
-  
-
+     <!-- Projects Section -->
+     <section id="projects" class="vintage-section">
+      <h2 class="vintage-title">Projects</h2>
+      <div class="projects-grid">
+        <div class="project-item vintage-border vintage-shadow">
+          <h3>Gamer Portfolio</h3>
+          <p>JavaScript, Gatsby, GraphQL, Tailwind CSS, AWS S3 API</p>
+          <p>Developed a platform for gamers to showcase portfolios, ranks, and clips. Implemented GraphQL and AWS S3 for efficient data management.</p>
+        </div>
+        <div class="project-item vintage-border vintage-shadow">
+          <h3>Bite Swipe</h3>
+          <p>JavaScript, React, Tailwind CSS, API</p>
+          <p>React-based web app for restaurant selection using Foursquare Places API and Tailwind CSS for responsive design.</p>
+        </div>
+        <div class="project-item vintage-border vintage-shadow">
+          <h3>Stevens Blueprint Website</h3>
+          <p>HTML, CSS, JavaScript, Tailwind CSS</p>
+          <p>Engineered the "Get Involved" section, increasing volunteer sign-ups by 25% using responsive design principles.</p>
+        </div>
+        <div class="project-item vintage-border vintage-shadow">
+          <h3>Digi-Drobe</h3>
+          <p>JavaScript, HTML, CSS, AJAX, MongoDB, AWS</p>
+          <p>Full stack social media web application for sharing and customizing outfit posts, using AWS and MongoDB for backend infrastructure.</p>
+        </div>
       </div>
     </section>
 
